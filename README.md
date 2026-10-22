@@ -8,9 +8,10 @@ Each release provides `phoenixlighting.dll`, a complete ZIP package, and SHA-256
 
 ## Requirements and installation
 
-- Use Ashita v4 with dgVoodoo 2.87.5 and Direct3D 12 output. In the Phoenix launcher, select **Settings → Rendering → dgVoodoo2 → Direct3D 12**.
-- Enable Phoenix Lighting in the launcher's plugin list so it loads when the game starts.
-- For a manual update, close the game and replace `plugins/phoenixlighting.dll` with the downloaded DLL. Keep your existing settings. The ZIP's README includes instructions for using the bundled defaults.
+- Use Windows, Ashita v4 and dgVoodoo 2.87.5. In the Phoenix launcher, select **Settings → Rendering → dgVoodoo2**, then **Direct3D 11** or **Direct3D 12**. The same DLL contains both backends. Linux/Wine lighting support is not qualified.
+- Enable Phoenix Lighting in the launcher so it loads when the game starts. Restart the game after changing the output API.
+- For a manual update, close the game and back up `config/phoenixlighting`, then replace `plugins/phoenixlighting.dll` with the downloaded DLL. Keep your existing `defaults.ini` and leave `config/phoenixlighting/replacements` empty so the embedded shaders run.
+- Version 1.1.5 includes its default profile in the DLL; its ZIP does not include a separate `defaults.ini`.
 
 ## Settings
 
